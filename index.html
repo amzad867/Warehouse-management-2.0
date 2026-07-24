@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Warehouse Management With AMZ</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Warehouse Management <br>With AMZ</br></h1>
+
+    <div class="cards">
+
+        <div class="card" onclick="openSection('expiry')">
+            <div class="icon">📅</div>
+            <h3>Expiry Check</h3>
+            <p>Check product expiry</p>
+        </div>
+
+
+        <div class="card" onclick="openSection('shortstock')">
+            <div class="icon">📦</div>
+            <h3>Short Stock</h3>
+            <p>Report shortage</p>
+        </div>
+
+
+        <div class="card" onclick="openSection('wastage')">
+          
+            <div class="icon">🗑️</div>
+            <h3>Daily Wastage</h3>
+            <p>Submit wastage</p>
+        </div>
+
+    </div>
+
+
+
+    <!-- Expiry Section -->
+
+   <div id="expiry" class="form-box">
+
+    <h2>Expiry Check</h2>
+
+    <input id="exItem" type="number" placeholder="Item No">
+
+    <input id="exShelf" type="text" placeholder="Shelf">
+
+    <input id="exDate" type="date">
+
+    <button id="exBtn" onclick="submitExpiry()">Submit</button>
+
+</div>
+
+
+
+   <div id="shortstock" class="form-box">
+
+    <h2>Short Stock</h2>
+
+    <input id="ssItem" type="number" placeholder="Item No">
+    
+    <input id="ssQty" type="number" placeholder="Short Quantity">
+
+    <input id="ssShelf" type="text" placeholder="Shelf">
+
+    <button id="ssBtn" onclick="submitShortStock()">Submit</button>
+
+</div>
+
+
+
+
+    <!-- Wastage Section -->
+
+  <div id="wastage" class="form-box">
+
+    <h2>Daily Wastage</h2>
+
+
+    <input id="wsItem" type="number" placeholder="Item No">
+    <input id="wsQty" type="number" placeholder="Quantity">
+    <select id="wsReason" onchange="checkWastageReason()">
+
+        <option value="">Select Reason</option>
+        <option value="Damage">Damage</option>
+        <option value="Expire">Expire</option>
+        <option value="Recall">Recall</option>
+
+    </select>
+
+   
+
+    <div id="expireBox" class="hidden">
+        <input id="wsExpire" type="date">
+    </div>
+    
+    <div id="responsibleBox" class="hidden">
+
+        <input id="wsResponsible" type="text" placeholder="Responsible Person">
+
+    </div>
+    
+     <select id="wsResource">
+
+        <option value="">Select Resource</option>
+        <option value="Ambient">Ambient</option>
+        <option value="Chiller">Chiller</option>
+        <option value="Freezer">Freezer</option>
+
+    </select>
+
+    <label class="upload">
+
+    📷 Upload Photo
+
+    <input
+        id="wsPhoto"
+        type="file"
+        accept="image/*"
+        onchange="showFileName()">
+
+</label>
+
+<p id="fileName">No file selected</p>
+
+
+
+    <button id="wsBtn" onclick="submitWastage()">
+        Submit
+    </button>
+
+
+</div>
+
+
+</div>
+
+
+<script src="script.js"></script>
+<script src="wastage.js"></script>
+
+</body>
+</html>

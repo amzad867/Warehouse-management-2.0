@@ -1,0 +1,188 @@
+:root{
+    --main-color:#1BC3D7;
+}
+
+
+*{
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+
+body{
+
+    margin:0;
+    background:#f5f8fa;
+
+}
+
+
+
+.container{
+
+    max-width:500px;
+    margin:auto;
+    padding:20px;
+
+}
+
+
+
+h1{
+
+    text-align:center;
+    color:#333;
+    margin-bottom:25px;
+
+}
+
+
+
+.cards{
+
+    display:grid;
+    gap:15px;
+
+}
+
+
+
+.card{
+
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px #0001;
+    text-align:center;
+    cursor:pointer;
+    border-left:5px solid var(--main-color);
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+.icon{
+
+    font-size:35px;
+
+}
+
+
+
+.card h3{
+
+    margin:10px 0 5px;
+
+}
+
+
+
+.card p{
+
+    color:#777;
+
+}
+
+
+
+
+.form-box{
+
+    display:none;
+    background:white;
+    padding:20px;
+    margin-top:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px #0001;
+
+}
+
+
+
+.form-box h2{
+
+    color:var(--main-color);
+
+}
+
+
+
+input{
+
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:1px solid #ddd;
+    border-radius:8px;
+
+}
+
+
+
+button{
+
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:none;
+    border-radius:8px;
+    background:var(--main-color);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+    opacity:.9;
+
+}
+select{
+
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:1px solid #ddd;
+    border-radius:8px;
+
+}
+
+
+.hidden{
+
+    display:none;
+
+}
+
+
+
+.upload{
+
+    display:block;
+    margin-top:15px;
+    padding:15px;
+    border:2px dashed var(--main-color);
+    border-radius:10px;
+    text-align:center;
+    color:var(--main-color);
+    cursor:pointer;
+
+}
+
+
+.upload input{
+
+    display:none;
+
+}
