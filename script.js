@@ -23,6 +23,7 @@ function openSection(id){
 
 }
 
+
 function submitShortStock(){
 
     let item = document.getElementById("ssItem").value;
@@ -66,7 +67,7 @@ function submitShortStock(){
     })
     .then(()=>{
 
-        alert("Short Stock Submitted Successfully ✅");
+        alert("Short and Extra Submitted Successfully ✅");
 
 
         document.getElementById("ssItem").value="";
@@ -90,6 +91,7 @@ function submitShortStock(){
 
 
 }
+
 
 function submitExpiry(){
 
