@@ -11,45 +11,6 @@
 <link rel="icon" sizes="192x192" href="favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
 
-<style>
-/* Submitter search */
-.submitter-search-box {
-    position: relative;
-    width: 100%;
-}
-
-#ssSubmitter {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.submitter-results {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    z-index: 9999;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    max-height: 220px;
-    overflow-y: auto;
-    display: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.submitter-result {
-    padding: 12px;
-    cursor: pointer;
-    border-bottom: 1px solid #eee;
-    background: white;
-}
-
-.submitter-result:hover {
-    background: #f1f1f1;
-}
-</style>
-
 </head>
 
 <body>
@@ -110,37 +71,15 @@
 
         <input id="ssItem" type="number" placeholder="Item No">
 
-
         <select id="ssShelf">
             <option value="">Select Type</option>
             <option value="SHORT">SHORT</option>
             <option value="EXTRA">EXTRA</option>
         </select>
 
-
         <input id="ssQty" type="number" placeholder="Quantity">
 
-
-        <!-- Submitter -->
-
-        <div class="submitter-search-box">
-
-            <input
-                id="ssSubmitter"
-                type="text"
-                placeholder="Search Submitter"
-                autocomplete="off"
-                oninput="searchSubmitter()"
-                onfocus="searchSubmitter()">
-
-            <div id="submitterResults" class="submitter-results"></div>
-
-        </div>
-
-
-        <button id="ssBtn" onclick="submitShortStock()">
-            Submit
-        </button>
+        <button id="ssBtn" onclick="submitShortStock()">Submit</button>
 
     </div>
 
@@ -153,11 +92,8 @@
 
         <h2>Daily Wastage</h2>
 
-
         <input id="wsItem" type="number" placeholder="Item No">
-
         <input id="wsQty" type="number" placeholder="Quantity">
-
 
         <select id="wsReason" onchange="checkWastageReason()">
 
@@ -169,24 +105,16 @@
         </select>
 
 
-
         <div id="expireBox" class="hidden">
-
             <input id="wsExpire" type="date">
-
         </div>
-
 
 
         <div id="responsibleBox" class="hidden">
 
-            <input
-                id="wsResponsible"
-                type="text"
-                placeholder="Responsible Person">
+            <input id="wsResponsible" type="text" placeholder="Responsible Person">
 
         </div>
-
 
 
         <select id="wsResource">
@@ -197,7 +125,6 @@
             <option value="Freezer">Freezer</option>
 
         </select>
-
 
 
         <label class="upload">
@@ -213,9 +140,7 @@
 
         </label>
 
-
         <p id="fileName">No file selected</p>
-
 
 
         <button id="wsBtn" onclick="submitWastage()">
@@ -228,19 +153,15 @@
 </div>
 
 
-
 <div class="fixed-footer">
 
-    <a
-        href="https://docs.google.com/spreadsheets/d/1f_5iMxQOoL6wH9ZWJqf1Y3bzz2ES1i2borppU6zmL9g/edit?usp=sharing"
-        target="_blank">
+    <a href="https://docs.google.com/spreadsheets/d/1f_5iMxQOoL6wH9ZWJqf1Y3bzz2ES1i2borppU6zmL9g/edit?usp=sharing" target="_blank">
 
         📊 Live Warehouse Updates
 
     </a>
 
 </div>
-
 
 
 <script src="script.js"></script>
